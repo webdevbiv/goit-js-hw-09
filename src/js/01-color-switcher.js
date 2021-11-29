@@ -22,7 +22,7 @@ refs.startBtn.addEventListener('click', startChangeColor)
 refs.stopBtn.addEventListener('click', stopChangeColor)
 
 function startChangeColor(e) {
-    console.log('test');
+
     changeBodyBackgroundColor()
     timerId = setInterval(() => {
         changeBodyBackgroundColor()
@@ -33,11 +33,9 @@ function startChangeColor(e) {
 }
 
 function stopChangeColor(e) {
-    console.log('stop test');
+
     clearInterval(timerId);
     refs.startBtn.disabled = false;
     refs.stopBtn.disabled = true;
 }
 
-console.log('test');
-console.log('test');
