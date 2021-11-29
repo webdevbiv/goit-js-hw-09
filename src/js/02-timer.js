@@ -1,15 +1,3 @@
-// const date = new Date()
-// console.log(typeof date, date);
-// const dateString = date.toString()
-// console.log(typeof dateString, dateString);
-// console.log(new Date(0));
-// console.log(date.getTime());
-
-// const teamMeetingDate = new Date("March 16, 2030")
-// console.log(teamMeetingDate);
-// console.log(date.getMinutes());
-// console.log(date.getHours());
-
 import flatpickr from "flatpickr";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import "flatpickr/dist/flatpickr.min.css";
@@ -117,3 +105,15 @@ function convertMs(ms) {
 function pad(value) {
     return String(value).padStart(2, '0')
 }
+
+// const date = new Date()
+// console.log(typeof date, date);
+// const dateString = date.toString()
+// console.log(typeof dateString, dateString);
+// console.log(new Date(0));
+// console.log(date.getTime());
+
+// const teamMeetingDate = new Date("March 16, 2030")
+// console.log(teamMeetingDate);
+// console.log(date.getMinutes());
+// console.log(date.getHours());
