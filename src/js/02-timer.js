@@ -10,12 +10,13 @@ const refs = {
     hours: document.querySelectorAll('.field ')[1].children[0],
     minutes: document.querySelectorAll('.field ')[2].children[0],
     seconds: document.querySelectorAll('.field ')[3].children[0],
-    video: document.querySelector('video')
+    video: document.querySelector('video'),
+    timer: document.querySelector('.timer')
 }
 // console.log(refs.selector);
 // console.log(refs.startBtn);
 // console.log(refs.days);
-// console.log(refs.seconds);
+console.log(refs.timer);
 
 refs.startBtn.disabled = true;
 
@@ -35,6 +36,7 @@ const options = {
             changeValues(startTime)
             refs.startBtn.addEventListener('click', () => {
                 startTimer(startTime)
+                refs.timer.classList.add('center')
                 refs.startBtn.disabled = true;
                 refs.video.classList.remove('hidden')
             })
