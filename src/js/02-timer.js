@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 import "flatpickr/dist/flatpickr.min.css";
 
 const refs = {
@@ -76,6 +77,14 @@ function startTimer(ms) {
         } else {
             clearInterval(timer)
             refs.video.classList.add('hidden')
+            return Report.success(
+                'Countdown is over!',
+                '',
+                'Okay',
+                () => {
+                    location.reload()
+                }
+            );
         }
     }, 1000)
 
