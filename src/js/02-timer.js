@@ -75,6 +75,7 @@ function startTimer(ms) {
             console.log(deltaTime);
         } else {
             clearInterval(timer)
+            refs.video.classList.add('hidden')
         }
     }, 1000)
 
