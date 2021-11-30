@@ -44,12 +44,12 @@ img {
   z-index: -10;
 }
 
-.center {
-  position: absolute;
-  top: 30%;
-  transform: translate(100%, -50%);
-  /* border: 5px solid #ffff00; */
-  padding: 10px;
+.centered {
   color: #fafafa;
+  position: fixed;
+  top: 30%;
+  left: 50%;
   font-size: 40px;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }

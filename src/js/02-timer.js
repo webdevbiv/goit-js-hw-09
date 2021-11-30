@@ -36,7 +36,7 @@ const options = {
             changeValues(startTime)
             refs.startBtn.addEventListener('click', () => {
                 startTimer(startTime)
-                refs.timer.classList.add('center')
+                refs.timer.classList.add('centered')
                 refs.startBtn.disabled = true;
                 refs.video.classList.remove('hidden')
             })
