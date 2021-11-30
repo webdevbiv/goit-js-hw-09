@@ -8,7 +8,8 @@ const refs = {
     days: document.querySelectorAll('.field ')[0].children[0],
     hours: document.querySelectorAll('.field ')[1].children[0],
     minutes: document.querySelectorAll('.field ')[2].children[0],
-    seconds: document.querySelectorAll('.field ')[3].children[0]
+    seconds: document.querySelectorAll('.field ')[3].children[0],
+    video: document.querySelector('video')
 }
 // console.log(refs.selector);
 // console.log(refs.startBtn);
@@ -16,6 +17,7 @@ const refs = {
 // console.log(refs.seconds);
 
 refs.startBtn.disabled = true;
+
 
 const options = {
     enableTime: true,
@@ -28,8 +30,13 @@ const options = {
         const userDate = selectedDates[0];
         dateAlert(userDate, date)
         if (refs.startBtn.disabled === false) {
-            const ms = dateCompare(userDate, date)
-            startTimer(ms)
+            const startTime = dateCompare(userDate, date)
+            changeValues(startTime)
+            refs.startBtn.addEventListener('click', () => {
+                startTimer(startTime)
+                refs.startBtn.disabled = true;
+                refs.video.classList.remove('hidden')
+            })
         }
     },
 };
