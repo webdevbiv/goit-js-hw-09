@@ -28,14 +28,26 @@ function startChangeColor(e) {
         changeBodyBackgroundColor()
         console.log(timerId);
     }, 1000)
-    refs.startBtn.disabled = true;
-    refs.stopBtn.disabled = false;
+    // refs.startBtn.disabled = true;
+    // refs.stopBtn.disabled = false;
+    changeDisabledState()
 }
 
 function stopChangeColor(e) {
 
     clearInterval(timerId);
-    refs.startBtn.disabled = false;
-    refs.stopBtn.disabled = true;
+    // refs.startBtn.disabled = false;
+    // refs.stopBtn.disabled = true;
+    changeDisabledState()
+}
+
+function changeDisabledState() {
+    if (refs.startBtn.disabled === false) {
+        refs.startBtn.disabled = true;
+        refs.stopBtn.disabled = false;
+    } else {
+        refs.startBtn.disabled = false;
+        refs.stopBtn.disabled = true;
+    }
 }
 
