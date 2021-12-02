@@ -31,7 +31,7 @@ const options = {
         const date = new Date();
         const userDate = selectedDates[0];
         dateAlert(userDate, date)
-        if (refs.startBtn.disabled === false) {
+        if (!refs.startBtn.disabled) {
             const startTime = dateCompare(userDate, date)
             changeValues(startTime)
             refs.startBtn.addEventListener('click', () => {
