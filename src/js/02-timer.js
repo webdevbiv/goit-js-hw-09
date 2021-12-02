@@ -16,7 +16,7 @@ const refs = {
 // console.log(refs.selector);
 // console.log(refs.startBtn);
 // console.log(refs.days);
-console.log(refs.timer);
+// console.log(refs.timer);
 
 refs.startBtn.disabled = true;
 
@@ -27,7 +27,6 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-        // console.log(selectedDates[0]);
         const date = new Date();
         const userDate = selectedDates[0];
         dateAlert(userDate, date)
