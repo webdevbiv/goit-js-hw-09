@@ -30,7 +30,7 @@ function startChangeColor(e) {
     }, 1000)
     // refs.startBtn.disabled = true;
     // refs.stopBtn.disabled = false;
-    changeDisabledState()
+    changeDisabledState(true, false)
 }
 
 function stopChangeColor(e) {
@@ -38,16 +38,19 @@ function stopChangeColor(e) {
     clearInterval(timerId);
     // refs.startBtn.disabled = false;
     // refs.stopBtn.disabled = true;
-    changeDisabledState()
+    changeDisabledState(false, true)
 }
 
-function changeDisabledState() {
-    if (refs.startBtn.disabled === false) {
-        refs.startBtn.disabled = true;
-        refs.stopBtn.disabled = false;
-    } else {
-        refs.startBtn.disabled = false;
-        refs.stopBtn.disabled = true;
-    }
+function changeDisabledState(state1, state2) {
+    refs.startBtn.disabled = state1
+    refs.stopBtn.disabled = state2
+
+    // if (refs.startBtn.disabled === false) {
+    //     refs.startBtn.disabled = true;
+    //     refs.stopBtn.disabled = false;
+    // } else {
+    //     refs.startBtn.disabled = false;
+    //     refs.stopBtn.disabled = true;
+    // }
 }
 
